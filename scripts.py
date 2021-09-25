@@ -64,7 +64,7 @@ if __name__ == '__main__':
         s=s+str(i)
     print(s)
 
- #List Comprehensions
+#List Comprehensions
 if __name__ == '__main__':
     x = int(raw_input())
     y = int(raw_input())
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     l=[[i,j,k] for i in range(0,x+1) for j in range(0,y+1) for k in range(0,z+1) if i+j+k!=n]
     print(l)
     
-  #Nested Lists
+#Nested Lists
 if __name__ == '__main__':
     #creo lista di liste
     #ottengo il valore minimo m, e  k il numero di volte che compare 
@@ -104,3 +104,35 @@ if __name__ == '__main__':
     name.sort()
     for el in name:  
         print(el)  
+        
+#Finding the percentage
+if __name__ == '__main__':
+    n = int(raw_input())
+    student_marks = {}
+    for _ in range(n):
+        line = raw_input().split()
+        name, scores = line[0], line[1:]
+        scores = map(float, scores)
+        student_marks[name] = scores
+    query_name = raw_input()
+    
+    #accedo al diz e faccio media dei valori approssimo al 2
+    
+    punteggio=student_marks[query_name]
+    sum=0
+    lenght=len(punteggio)
+    for el in punteggio:
+        sum+=el
+    sum=sum/lenght
+    print(format(sum, '.2f'))  
+    
+#Find the Runner-Up Score!    
+if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+    arr.sort()
+    mas=arr[-1]
+    while n-1>=0 and arr[n-1]==mas:
+        arr.pop()
+        n-=1 
+    print(arr[n-1])
