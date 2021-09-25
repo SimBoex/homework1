@@ -76,8 +76,7 @@ if __name__ == '__main__':
     
 #Nested Lists
 if __name__ == '__main__':
-    #creo lista di liste
-    #ottengo il valore minimo m, e  k il numero di volte che compare 
+    
     l=[]
     mini=float("inf")
     num=1
@@ -90,9 +89,7 @@ if __name__ == '__main__':
             num=1
         elif mini==score:
             num+=1
-    #ordino la lista in modo crescente
-    #elimino i primi k valori
-    #prendo il valore minimo m2, e estraggo dalla lista e print fino a quando l[next]=m2 
+    
     l=sorted(l,key=lambda x: x[1])
     l=l[num:]
     min2=l[0][1]
@@ -116,7 +113,6 @@ if __name__ == '__main__':
         student_marks[name] = scores
     query_name = raw_input()
     
-    #accedo al diz e faccio media dei valori approssimo al 2
     
     punteggio=student_marks[query_name]
     sum=0
