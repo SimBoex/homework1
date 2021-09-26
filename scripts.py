@@ -206,3 +206,28 @@ if __name__ == '__main__':
     i, c = raw_input().split()
     s_new = mutate_string(s, int(i), c)
     print s_new
+    
+#Find a string
+def count_substring(string, sub_string):
+    inizio=sub_string[0]
+    add=True
+    intero=0
+    for char in range(0,len(string)):
+        if string[char]==inizio and char+len(sub_string)-1<len(string):
+            ck=1
+            while ck<len(sub_string) and add:
+                if string[char+ck]!=sub_string[ck]:
+                    add=False
+                ck+=1
+            if add:
+                intero+=1
+            add=True
+     
+    return intero
+
+if __name__ == '__main__':
+    string = raw_input().strip()
+    sub_string = raw_input().strip()
+    
+    count = count_substring(string, sub_string)
+    print count
