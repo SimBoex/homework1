@@ -165,3 +165,24 @@ if __name__ == '__main__':
     integer_list = map(int, raw_input().split())
     t=tuple(integer_list)
     print(hash(t))
+
+#sWAP cASE
+def swap_case(s):
+    s=s.swapcase()
+    return s
+
+if __name__ == '__main__':
+    s = raw_input()
+    result = swap_case(s)
+    print result
+    
+#String Split and Join
+def split_and_join(line):
+    # write your code here
+    return "-".join(line.split())
+
+if __name__ == '__main__':
+    line = raw_input()
+    result = split_and_join(line)
+    print result
+    
