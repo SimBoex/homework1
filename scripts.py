@@ -231,3 +231,30 @@ if __name__ == '__main__':
     
     count = count_substring(string, sub_string)
     print count
+
+#String Validators
+if __name__ == '__main__':
+    s = raw_input()
+
+isalnum=False
+isalpha=False
+isdigit=False
+lower=False
+upper=False
+for char in s:
+    if  not isalnum and char.isalnum() :
+        isalnum=True
+    if not isalpha and char.isalpha():
+        isalpha=True
+    if not isdigit and char.isdigit():
+        isdigit=True
+    if not lower and char.islower():
+        lower=True
+    if not upper and char.isupper():
+        upper=True
+        
+print(isalnum)
+print(isalpha)
+print(isdigit)
+print(lower)
+print(upper)
