@@ -132,3 +132,30 @@ if __name__ == '__main__':
         arr.pop()
         n-=1 
     print(arr[n-1])
+    
+#Lists
+if __name__ == '__main__':
+    list=[]
+    x=0
+    N = int(raw_input())
+    while x<N:
+        comando= str(raw_input())
+        lista=comando.split()
+        com=lista[0]
+        valori=lista[1:]
+        if com=="insert":
+             list.insert(int(valori[0]),int(valori[1]))
+        elif com=="print":
+             print(list)
+        elif(com=="remove"):
+             list.remove(int(valori[0]))
+        elif(com=="append"):
+             list.append(int(valori[0]))
+        elif(com=="sort"):
+             list.sort()
+        elif(com=="pop"):
+             list.pop()
+        elif(com=="reverse"):
+             list.reverse()
+        x+=1
+        
