@@ -343,3 +343,19 @@ for row in range(n):
     s.add(nome)
 print(len(s))
    
+#Set .discard(), .remove() & .pop()
+n = int(input())
+s = set(map(int, input().split()))
+num=int(input())
+for el in range(num):
+    row=input().split()
+    if len(row)>1:
+        valore=int(row[1])
+        if row[0]=="discard":
+            s.discard(valore)
+        else:
+            s.remove(valore)
+    else:
+        s.pop()
+somma=sum(s)
+print(somma)
