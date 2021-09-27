@@ -367,3 +367,11 @@ n2=int(input())
 s2=set(map(int,input().split()))
 tot=s1.union(s2)
 print(len(tot))
+
+#Set .intersection() Operation
+n1=int(input())
+s1=set(map(int,input().split()))
+n2=int(input())
+s2=set(map(int,input().split()))
+inter=s1.intersection(s2)
+print(len(inter))
