@@ -303,3 +303,16 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+    
+#Introduction to Sets
+def average(array):
+    # your code goes here
+    insieme=set(array)
+    mas=sum(insieme)
+    return mas/len(insieme)
+    
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    result = average(arr)
+    print(result)
