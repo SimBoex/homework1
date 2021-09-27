@@ -316,3 +316,24 @@ if __name__ == '__main__':
     arr = list(map(int, input().split()))
     result = average(arr)
     print(result)
+    
+#Symmetric Difference
+if __name__ == '__main__':
+    n1=int(input())
+    l1=input().split()
+    s1=set(l1)
+    n2=int(input())
+    l2=input().split()
+    s2=set(l2)
+    diff1=s1.difference(s2)
+    diff2=s2.difference(s1)
+    res=diff1.union(diff2)
+    l=[]
+    for el in list(res):
+        l.append(int(el))
+    l=sorted(l)
+    for el in l:
+        print(el)
+
+    
+   
