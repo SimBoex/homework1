@@ -359,3 +359,11 @@ for el in range(num):
         s.pop()
 somma=sum(s)
 print(somma)
+
+#Set .union() Operation
+n1=int(input())
+s1=set(map(int,input().split()))
+n2=int(input())
+s2=set(map(int,input().split()))
+tot=s1.union(s2)
+print(len(tot))
