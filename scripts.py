@@ -284,3 +284,22 @@ def print_formatted(number):
 if __name__ == '__main__':
     n = int(input())
     print_formatted(n)
+    
+#Capitalize!    
+def solve(s):
+    l=s.split(" ")
+    for pos in range(len(l)):
+        l[pos]=l[pos].capitalize()
+    stringa=" ".join(l)
+    return stringa
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
