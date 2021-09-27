@@ -258,3 +258,19 @@ print(isalpha)
 print(isdigit)
 print(lower)
 print(upper)
+
+#Text Wrap
+import textwrap
+
+def wrap(string, max_width):
+    result=""
+    numero=len(string)/max_width
+    for i in range(0,round(numero)+1):
+        result=result+string[i*max_width:(i+1)*max_width]+"\n"
+    result=result[:-1]
+    return result
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
