@@ -334,6 +334,12 @@ if __name__ == '__main__':
     l=sorted(l)
     for el in l:
         print(el)
-
-    
+        
+#Set .add()
+n=int(input())
+s=set()
+for row in range(n):
+    nome=str(input())
+    s.add(nome)
+print(len(s))
    
