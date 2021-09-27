@@ -274,3 +274,13 @@ if __name__ == '__main__':
     string, max_width = input(), int(input())
     result = wrap(string, max_width)
     print(result)
+    
+#String Formatting
+def print_formatted(number):
+    # your code goes here
+    lunghezza = len("{0:b}".format(number))
+    for i in range(1,number+1):
+        print ("{:{lar}d} {:{lar}o} {:{lar}X} {:{lar}b}".format(i,i,i,i, lar=lunghezza))
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
