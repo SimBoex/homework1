@@ -406,3 +406,16 @@ for el in range(righe):
     else:
         s1.difference_update(s2)
 print(sum(s1))
+
+#The Captain's Room
+n1=int(input())
+s1=list(map(int,input().split()))
+in1=set()
+in2=set()
+for el in s1:
+    if el not in in1:
+        in1.add(el)
+    elif el  in in1:
+        in2.add(el)
+res=in1-in2
+print(res.pop())
