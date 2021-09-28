@@ -459,3 +459,17 @@ for el in l:
     elif el in s2:
         cont-=1
 print(cont)
+
+#collections.Counter()
+from collections import Counter
+n1=int(input())
+c=Counter(map(int,input().split()))
+n=int(input())
+tot=0
+for el in range(n):
+    row=input().split()
+    taglia,costo=row
+    if c[int(taglia)]>0:
+       tot+=int(costo)
+       c[int(taglia)]=c[int(taglia)]-1 
+print(tot)
