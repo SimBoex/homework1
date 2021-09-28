@@ -375,3 +375,17 @@ n2=int(input())
 s2=set(map(int,input().split()))
 inter=s1.intersection(s2)
 print(len(inter))
+
+#Set .difference() Operation
+n1=int(input())
+s1=set(map(int,input().split()))
+n2=int(input())
+s2=set(map(int,input().split()))
+print(len(s1-s2))
+
+#Set .symmetric_difference() Operation
+n1=int(input())
+s1=set(map(int,input().split()))
+n2=int(input())
+s2=set(map(int,input().split()))
+print(len(s1.symmetric_difference(s2)))
