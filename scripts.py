@@ -419,3 +419,15 @@ for el in s1:
         in2.add(el)
 res=in1-in2
 print(res.pop())
+
+#Check Subset
+t=int(input())
+for el in range(t):
+    n1=int(input())
+    s1=set(map(int,input().split()))
+    n2=int(input())
+    s2=set(map(int,input().split()))
+    if len(s1-s2)==0:
+        print(True)
+    else:
+        print(False)
