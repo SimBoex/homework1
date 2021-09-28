@@ -389,3 +389,20 @@ s1=set(map(int,input().split()))
 n2=int(input())
 s2=set(map(int,input().split()))
 print(len(s1.symmetric_difference(s2)))
+
+#Set Mutations
+n1=int(input())
+s1=set(map(int,input().split()))
+righe=int(input())
+for el in range(righe):
+    comando=str(input().split()[0])
+    s2=set(map(int,input().split()))
+    if comando=="intersection_update":
+        s1.intersection_update(s2)
+    elif comando=="update":
+        s1.update(s2)
+    elif comando=="symmetric_difference_update":
+        s1.symmetric_difference_update(s2)
+    else:
+        s1.difference_update(s2)
+print(sum(s1))
