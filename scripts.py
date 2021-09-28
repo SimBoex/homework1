@@ -431,3 +431,16 @@ for el in range(t):
         print(True)
     else:
         print(False)
+
+#Check Strict Superset
+s1=set(map(int,input().split()))
+n1=int(input())
+val=True
+for el in range(n1):
+    s2=set(map(int,input().split()))
+    if len(s1-s2)>=1 and len(s2-s1)==0:
+        val=True
+    else:
+        val=False
+        break
+print(val)
