@@ -444,3 +444,18 @@ for el in range(n1):
         val=False
         break
 print(val)
+
+#No Idea!
+n,m=input().split()
+n=int(n)
+m=int(m)
+l=list(map(int,input().split()))
+s1=set(map(int,input().split()))
+s2=set(map(int,input().split()))
+cont=0
+for el in l:
+    if el in s1:
+        cont+=1
+    elif el in s2:
+        cont-=1
+print(cont)
