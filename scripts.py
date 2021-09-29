@@ -523,3 +523,24 @@ for el in range(n):
         else:
             d.pop()            
 print(" ".join(d))
+
+#DefaultDict Tutorial
+from collections import defaultdict
+d = defaultdict(list)
+n,m=map(int,input().split())
+for el in range(n+m):
+    stringa=input()
+  
+    if el<n:
+        if stringa not in d:
+            d[stringa].append(el+1)
+        else:
+            d[stringa].append(el+1)
+    
+    else:
+        if stringa in d:
+            for c in d[stringa]:
+                print(c,end=" ")
+            print()
+        else:
+            print(-1)
