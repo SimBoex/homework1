@@ -488,3 +488,21 @@ for el in range(n):
         
 for item,costo in diz.items():
     print("{} {}".format(item,costo))
+
+#Collections.namedtuple()
+from collections import namedtuple
+n=int(input())
+head=input().split()
+l=[]
+for el in range(n):
+    Point2= namedtuple("head",head)
+    riga=input().split()
+    s=Point2(riga[0],riga[1],riga[2],riga[3])
+    l.append(s)
+sum=0
+for el in l:
+    t=int(getattr(el,'MARKS'))
+    sum+=t
+
+print(sum/n)
+    
