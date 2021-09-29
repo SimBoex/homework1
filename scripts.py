@@ -506,3 +506,20 @@ for el in l:
 
 print(sum/n)
     
+#Collections.deque()
+from collections import deque
+d=deque()
+n=int(input())
+for el in range(n):
+    commando=input().split()
+    if len(commando)>1:
+        if commando[0]=="appendleft":
+            d.appendleft(commando[1])
+        elif commando[0]=="append":
+            d.append(commando[1])
+    else:
+        if commando[0]=="popleft":
+            d.popleft()
+        else:
+            d.pop()            
+print(" ".join(d))
