@@ -550,3 +550,15 @@ import calendar
 mese,giorno,anno=map(int,input().split())
 giorni= ['MONDAY', "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 print(giorni[calendar.weekday(anno, mese, giorno)])
+
+#Exceptions
+n=int(input())
+for el in range(n):
+    try:
+        a,b=map(int,input().split())
+        div=a//b
+        print(div)
+    except ZeroDivisionError as e:
+        print ("Error Code:",e)
+    except ValueError as e1:
+        print("Error Code:",e1)
