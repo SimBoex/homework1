@@ -473,3 +473,18 @@ for el in range(n):
        tot+=int(costo)
        c[int(taglia)]=c[int(taglia)]-1 
 print(tot)
+
+#Collections.OrderedDict()
+from collections import OrderedDict
+n=int(input())
+diz=OrderedDict()
+for el in range(n):
+    *item,costo=input().split()
+    item=" ".join(item)
+    if item not in diz:
+        diz[item]=int(costo)
+    else:
+        diz[item]+=int(costo)
+        
+for item,costo in diz.items():
+    print("{} {}".format(item,costo))
