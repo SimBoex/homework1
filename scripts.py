@@ -544,3 +544,9 @@ for el in range(n+m):
             print()
         else:
             print(-1)
+            
+#Calendar Module
+import calendar
+mese,giorno,anno=map(int,input().split())
+giorni= ['MONDAY', "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+print(giorni[calendar.weekday(anno, mese, giorno)])
