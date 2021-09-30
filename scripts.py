@@ -600,3 +600,33 @@ if __name__ == '__main__':
     arr.sort(key=lambda x:x[k])
     for el in arr:
         print(*el,sep=" ")
+
+#ginortS
+
+stringa=input()
+even=[]
+odd=[]
+lower=[]
+upper=[]
+
+for char in stringa:
+    if char.isdigit() and int(char)%2==0:
+        even.append(char)
+    elif char.isdigit():
+        odd.append(char)
+    elif char.islower():
+        lower.append(char)
+    else:
+        upper.append(char)
+            
+even.sort()
+odd.sort()
+lower.sort()
+upper.sort()
+finale=""
+
+for el in [lower,upper,odd,even]:
+    if el:
+       finale=finale+"".join(el) 
+print(finale)
+
