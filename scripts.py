@@ -662,4 +662,9 @@ for _ in range(n):
         print("True")
     elif not re.search(reg,num):
         print("False")
-    
+
+#Re.split()
+regex_pattern = r"[.,]"	# Do not delete 'r'.
+
+import re
+print("\n".join(re.split(regex_pattern, input())))
