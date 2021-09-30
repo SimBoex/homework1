@@ -630,3 +630,23 @@ for el in [lower,upper,odd,even]:
        finale=finale+"".join(el) 
 print(finale)
 
+#Map and Lambda Function
+cube = lambda x:x*x*x # complete the lambda function x
+
+def fibonacci(n):
+    # return a list of fibonacci numbers
+    if n==0:
+        return []
+    elif n==1:
+        return [0]
+    elif n>1:
+        l=[0,1]
+        for el in range(2,n):
+            valore=l[el-1]+l[el-2]
+            l.append(valore)
+    return l
+
+    
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
