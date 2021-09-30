@@ -650,3 +650,16 @@ def fibonacci(n):
 if __name__ == '__main__':
     n = int(input())
     print(list(map(cube, fibonacci(n))))
+
+#Detect Floating Point Number
+import re
+reg='^[+-]?[0-9]*\.[0-9]+$'
+    
+n=int(input())
+for _ in range(n):
+    num=input() 
+    if re.search(reg, num):
+        print("True")
+    elif not re.search(reg,num):
+        print("False")
+    
