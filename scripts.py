@@ -562,3 +562,15 @@ for el in range(n):
         print ("Error Code:",e)
     except ValueError as e1:
         print("Error Code:",e1)
+
+#Zipped!
+n,x=map(int,input().split())
+l=[]
+for  el in range(x):
+    row=map(float,input().split())
+    l.append(row)
+
+f=zip(*l)
+for el in f:
+    tot=sum(el)/len(el)
+    print(tot)
