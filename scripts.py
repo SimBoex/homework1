@@ -688,3 +688,13 @@ else:
     for el in l:
         print(el)
 
+#Validating phone numbers
+import re
+n=int(input())
+for _ in range(n):
+    m=re.match('[789]\d{9,9}$',input())
+    if(m):
+        print("YES")
+    else:
+        print("NO")
+
