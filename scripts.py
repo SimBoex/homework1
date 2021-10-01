@@ -668,3 +668,13 @@ regex_pattern = r"[.,]"	# Do not delete 'r'.
 
 import re
 print("\n".join(re.split(regex_pattern, input())))
+
+#Group(), Groups() & Groupdict()
+import re
+stringa=input()
+m=re.search(r'(([0-9a-zA-Z]))\1+',stringa)
+if (m):
+    print(m.group(1))
+else:
+    print(-1)
+
