@@ -678,3 +678,13 @@ if (m):
 else:
     print(-1)
 
+#Re.findall() & Re.finditer()
+import re
+stringa=input()
+l= re.findall(r'(?<=[^AEIOUaeiou])([aeiouAEIOU]{2,})[^AEIOUaeiou]',stringa)
+if len(l)==0:
+    print(-1)
+else:
+    for el in l:
+        print(el)
+
