@@ -719,3 +719,14 @@ for el in range(n):
     m=re.match(r'[a-zA-Z][\w\-.]*@[a-zA-Z]+\.[a-zA-Z]{1,3}$',email2)
     if (m):
         print(email.utils.formataddr((nome, email2)))
+        
+#Hex Color Code
+import re
+n=int(input())
+pattern=r'[\s:](#[0-9a-fA-Z]{6}[^\n]|#[0-9a-fA-Z]{3}[^\n])'
+for num in range(n):
+    stringa=input()
+    l=re.findall(pattern,stringa)
+    for el in l:
+        if len(el)>=1:
+            print(el[:-1])
