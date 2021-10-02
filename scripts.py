@@ -709,3 +709,13 @@ if (M):
         print("({}, {})".format(el.start(),el.end()+len(k)-1))
 else :
     print("(-1, -1)")
+
+#Validating and Parsing Email Addresses
+import email.utils
+import re
+n=int(input())
+for el in range(n):
+    nome,email2=email.utils.parseaddr(input())
+    m=re.match(r'[a-zA-Z][\w\-.]*@[a-zA-Z]+\.[a-zA-Z]{1,3}$',email2)
+    if (m):
+        print(email.utils.formataddr((nome, email2)))
