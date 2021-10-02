@@ -698,3 +698,14 @@ for _ in range(n):
     else:
         print("NO")
 
+#Re.start() & Re.end()
+import re
+stringa=input()
+k=input()
+M=list(re.finditer('(?='+k+')',stringa))
+
+if (M):
+    for el in M:
+        print("({}, {})".format(el.start(),el.end()+len(k)-1))
+else :
+    print("(-1, -1)")
