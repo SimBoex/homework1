@@ -800,7 +800,7 @@ class MyHTMLParser(HTMLParser):
         else:
             print(">>> Single-line Comment\n",data,sep="")
     def handle_data(self, data):
-        if data!=0 and data!="\n":
+        if data!="" and data!="\n":
             print (">>> Data\n", data,sep="")
  
 html = ""       
