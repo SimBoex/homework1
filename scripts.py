@@ -745,3 +745,25 @@ for num in range(n):
     else:
         print(riga)
 
+#Validating UID
+import re
+pattern1=".*[A-Z].*[A-Z].*"
+pattern2=".*[0-9].*[0-9].*[0-9].*"
+pattern3="[a-zA-Z0-9]{10}"
+pattern4=r".*(.).*\1.*"
+l=[pattern1,pattern2,pattern3,pattern4]
+n=int(input())
+check=True
+for _ in range(n):
+    stringa= input()
+    for el in range(4):
+        m=re.match(l[el],stringa)
+        if (not m) and el!=3:
+            check=False
+        elif m and el==3:
+            check=False
+    if (check and len(stringa)==10):
+        print("Valid")
+    else:
+        print("Invalid")
+    check=True
