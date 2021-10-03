@@ -767,3 +767,25 @@ for _ in range(n):
     else:
         print("Invalid")
     check=True
+
+#HTML Parser - Part 1
+from html.parser import HTMLParser
+
+class MyHTMLParser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        print ("Start :", tag)
+        self.attributi(attrs)
+    def handle_endtag(self, tag):
+        print ("End   :", tag)
+    def handle_startendtag(self, tag, attrs):
+        print ("Empty :", tag)
+        self.attributi(attrs)
+    def attributi(self,attrs):
+        for nome,valore in attrs:
+            print("-> {} > {}".format(nome,valore))
+n=int(input())
+parser = MyHTMLParser()
+t=""
+for _ in range(n):
+    t=t+input()
+parser.feed(t)    
