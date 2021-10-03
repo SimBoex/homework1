@@ -789,3 +789,25 @@ t=""
 for _ in range(n):
     t=t+input()
 parser.feed(t)    
+
+#HTML Parser - Part 2
+from html.parser import HTMLParser
+
+class MyHTMLParser(HTMLParser):
+    def handle_comment(self, data):
+        if "\n" in data:
+          print (">>> Multi-line Comment\n", data,sep="")
+        else:
+            print(">>> Single-line Comment\n",data,sep="")
+    def handle_data(self, data):
+        if data!=0 and data!="\n":
+            print (">>> Data\n", data,sep="")
+ 
+html = ""       
+for i in range(int(input())):
+    html += input().rstrip()
+    html += '\n'
+    
+parser = MyHTMLParser()
+parser.feed(html)
+parser.close()
