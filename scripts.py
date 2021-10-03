@@ -811,3 +811,33 @@ for i in range(int(input())):
 parser = MyHTMLParser()
 parser.feed(html)
 parser.close()
+
+#Detect HTML Tags, Attributes and Attribute Values
+from html.parser import HTMLParser
+class MyHTMLParser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        print (tag)
+        self.attributi(attrs,tag)
+    def attributi(self,attrs,tag):
+        if tag=="object":
+                for nome,valore in attrs:
+                    if nome=="type":
+                        print("-> {} > {}".format(nome,valore))
+                    if nome=="data":
+                        print("-> {} > {}".format(nome,valore))
+                    if nome=="width":
+                        print("-> {} > {}".format(nome,valore))
+                    if nome=="height":
+                        print("-> {} > {}".format(nome,valore))
+
+        else:
+            for nome,valore in attrs:
+                print("-> {} > {}".format(nome,valore))
+         
+n=int(input())
+parser = MyHTMLParser()
+t=""
+for _ in range(n):
+    t=t+input()
+t.strip()
+parser.feed(t) 
