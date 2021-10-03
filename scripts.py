@@ -730,3 +730,18 @@ for num in range(n):
     for el in l:
         if len(el)>=1:
             print(el[:-1])
+
+#Regex Substitution
+import re
+n=int(input())
+pattern='(\s[&]{2}\s)|(\s[|]{2}\s)'
+for num in range(n):
+    riga=input()
+    fs=re.sub(pattern,lambda m: ' and ' if ' && '==m.group()  else ' or ',riga)
+    fs=re.sub(pattern,lambda m: ' and ' if ' && '==m.group()  else ' or ',fs)
+    
+    if fs:
+        print(fs)
+    else:
+        print(riga)
+
