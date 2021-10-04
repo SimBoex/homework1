@@ -863,3 +863,16 @@ l=line.split()
 array = numpy.array(l,int)
 array.shape=(3,3)
 print (array)
+
+#Transpose and Flatten
+import numpy
+n,m=map(int,input().split())
+m=[]
+for _ in range(n):
+    r=input().split()
+    m.append(r)
+a = numpy.array(m,int)
+print(numpy.transpose(a))
+print(a.flatten())
+
+
