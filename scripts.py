@@ -978,3 +978,14 @@ l=numpy.array(l,int)
 l1=numpy.array(l1,int)
 print(numpy.dot(l,l1))
 
+
+#Inner and Outer
+import numpy
+l=input().split()
+l2=input().split()
+l=numpy.array(l,int)
+l2=numpy.array(l2,int)
+
+print(numpy.inner(l,l2))
+print(numpy.outer(l,l2))
+
