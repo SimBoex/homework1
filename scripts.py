@@ -923,3 +923,12 @@ print (numpy.multiply(l, l2))
 print (numpy.floor_divide(l,l2))
 print (numpy.mod(l, l2)) 
 print (numpy.power(l, l2)) 
+
+#Floor, Ceil and Rint
+import numpy
+numpy.set_printoptions(legacy="1.13")
+a=list(map(float,input().split()))
+a=numpy.array(a)
+print (numpy.floor(a))
+print (numpy.ceil(a))
+print (numpy.rint(a))
