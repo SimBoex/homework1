@@ -942,3 +942,12 @@ for _ in range(n):
 
 a=numpy.array(l,int)
 print(numpy.prod(numpy.sum(a,0)))
+
+#Min and Max
+import numpy
+n,m=map(int,input().split())
+l=[]
+for _ in range(n):
+    l.append(input().split())
+a=numpy.array(l,int)
+print(numpy.max(numpy.min(a,1)))
