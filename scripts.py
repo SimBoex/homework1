@@ -891,3 +891,10 @@ a1 = numpy.array(l1,int)
 
 print (numpy.concatenate((a, a1), 0))
 
+#Zeros and Ones
+import numpy
+a=tuple(map(int,input().split()))
+print(numpy.zeros(a, dtype = int))
+print(numpy.ones(a, dtype =int))
+
+
