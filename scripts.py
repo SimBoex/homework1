@@ -989,3 +989,10 @@ l2=numpy.array(l2,int)
 print(numpy.inner(l,l2))
 print(numpy.outer(l,l2))
 
+
+#Polynomials
+import numpy
+l=input().split()
+l=numpy.array(l,float)
+x=int(input())
+print(numpy.polyval(l,x))
