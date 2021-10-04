@@ -996,3 +996,15 @@ l=input().split()
 l=numpy.array(l,float)
 x=int(input())
 print(numpy.polyval(l,x))
+
+#Linear Algebra
+import numpy
+n=int(input())
+l=[]
+for _ in range(n):
+    l.append(input().split())
+l=numpy.array(l,float)
+print (round(numpy.linalg.det(l),2))
+
+
+
