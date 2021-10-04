@@ -875,4 +875,19 @@ a = numpy.array(m,int)
 print(numpy.transpose(a))
 print(a.flatten())
 
+#Concatenate
+import numpy
+n,m,p=map(int,input().split())
+l=[]
+l1=[]
+for pos in range(n+m):
+    if pos<n :
+        l.append(input().split())
+    else:
+        l1.append(input().split())
+     
+a = numpy.array(l,int)
+a1 = numpy.array(l1,int)
+
+print (numpy.concatenate((a, a1), 0))
 
