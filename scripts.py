@@ -897,4 +897,8 @@ a=tuple(map(int,input().split()))
 print(numpy.zeros(a, dtype = int))
 print(numpy.ones(a, dtype =int))
 
-
+#Eye and Identity
+import numpy
+numpy.set_printoptions(legacy="1.13")
+n,m=map(int,input().split())
+print(numpy.eye(n, m, k = 0)) 
