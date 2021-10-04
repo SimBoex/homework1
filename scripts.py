@@ -963,3 +963,18 @@ print(numpy.mean(a,1))
 print(numpy.var(a,0))
 print(round(numpy.std(a),11))
 
+#Dot and Cross
+import numpy
+n=int(input())
+l=[]
+l1=[]
+for num in range(n*2):
+    if num<n:
+        l.append(input().split())
+    else:
+        l1.append(input().split())
+        
+l=numpy.array(l,int)
+l1=numpy.array(l1,int)
+print(numpy.dot(l,l1))
+
