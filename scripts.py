@@ -902,3 +902,24 @@ import numpy
 numpy.set_printoptions(legacy="1.13")
 n,m=map(int,input().split())
 print(numpy.eye(n, m, k = 0)) 
+
+#Array Mathematics
+import numpy
+n,m=map(int,input().split())
+l=[]
+l2=[]
+for pos in range(2*n):
+    if pos<n:
+        l.append(list(map(int,input().split())))
+    else:
+        l2.append(list(map(int,input().split())))
+
+l=numpy.array(l)
+l2=numpy.array(l2)
+
+print (numpy.add(l, l2))
+print (numpy.subtract(l, l2))
+print (numpy.multiply(l, l2))      
+print (numpy.floor_divide(l,l2))
+print (numpy.mod(l, l2)) 
+print (numpy.power(l, l2)) 
