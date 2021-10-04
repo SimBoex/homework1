@@ -855,3 +855,11 @@ def arrays(arr):
 arr = input().strip().split(' ')
 result = arrays(arr)
 print(result)
+
+#Shape and Reshape
+import numpy
+line=input()
+l=line.split()
+array = numpy.array(l,int)
+array.shape=(3,3)
+print (array)
