@@ -932,3 +932,13 @@ a=numpy.array(a)
 print (numpy.floor(a))
 print (numpy.ceil(a))
 print (numpy.rint(a))
+
+#Sum and Prod
+import numpy
+n,m=map(int,input().split())
+l=[]
+for _ in range(n):
+    l.append(input().split())
+
+a=numpy.array(l,int)
+print(numpy.prod(numpy.sum(a,0)))
