@@ -951,3 +951,15 @@ for _ in range(n):
     l.append(input().split())
 a=numpy.array(l,int)
 print(numpy.max(numpy.min(a,1)))
+
+#Mean, Var, and Std
+import numpy
+n,m=map(int,input().split())
+l=[]
+for _ in range(n):
+    l.append(list(map(int,input().split())))
+a=numpy.array(l)
+print(numpy.mean(a,1))
+print(numpy.var(a,0))
+print(round(numpy.std(a),11))
+
