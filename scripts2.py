@@ -141,3 +141,52 @@ if __name__ == '__main__':
 
     fptr.close()
 
+#Recursive Digit Sum
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'superDigit' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. STRING n
+#  2. INTEGER k
+#
+
+def superDigit(n, k):
+    # Write your code here
+    n=str(n)
+    tot=0
+    for char in n:
+        tot+=int(char)
+    tot=tot*k
+    tot=str(tot)
+    cont=0
+    while len(tot)!=1:
+        for char in tot:
+            cont+=int(char)
+        tot=str(cont)
+        cont=0
+    return int(tot)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    n = first_multiple_input[0]
+
+    k = int(first_multiple_input[1])
+
+    result = superDigit(n, k)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
