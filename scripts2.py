@@ -104,3 +104,39 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+    
+#Viral Advertising
+mport re
+import sys
+
+#
+# Complete the 'viralAdvertising' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER n as parameter.
+#
+
+def viralAdvertising(n):
+    # Write your code here
+    #creo array di tuple
+    #ogni giorno faccio utilizzo il giorno precedente per calcolare
+    a=[2]
+    inizio=2
+    for el in range(1,n):
+        valore=math.floor(inizio*3/2)
+        a.append(valore)
+        inizio=valore
+    return sum(a)
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    result = viralAdvertising(n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
