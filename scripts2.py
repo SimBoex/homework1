@@ -106,7 +106,8 @@ if __name__ == '__main__':
     fptr.close()
     
 #Viral Advertising
-mport re
+import random
+import re
 import sys
 
 #
