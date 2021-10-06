@@ -190,3 +190,44 @@ if __name__ == '__main__':
 
     fptr.close()
 
+    
+#Insertion Sort - Part 1
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'insertionSort1' function below.
+#
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. INTEGER_ARRAY arr
+#
+
+def insertionSort1(n, arr):
+    # Write your code here
+    value=arr[n-1]
+    index=n-2
+    while index>=0:
+        if arr[index]<value: 
+            arr[index+1]=value
+            print(*arr)
+            break
+
+        elif arr[index]>=value: 
+            arr[index+1]=arr[index] 
+            print(*arr)
+        if index==0:
+            arr[0]=value
+            print(*arr)    
+        index=index-1
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    insertionSort1(n, arr)
