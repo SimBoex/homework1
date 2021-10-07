@@ -336,7 +336,31 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
-    
+  
+# I have seen the discussions to overcome the time limit
+#The Minion Game
+def minion_game(string):
+    # your code goes here
+    Kcont=0
+    Scont=0
+    lung=len(string)
+    for pos in range(len(string)):
+        if string[pos] in "AEIOU":
+            Kcont+=lung-pos
+        else:
+            Scont+=lung-pos
+    if Scont>Kcont:
+        print("Stuart {}".format(Scont))
+    elif Kcont>Scont:
+        print("Kevin {}".format(Kcont))
+    else:
+        print("Draw")
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
+
+
 #Introduction to Sets
 def average(array):
     # your code goes here
