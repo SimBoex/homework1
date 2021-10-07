@@ -309,7 +309,15 @@ for i in range(thickness+1):
 for i in range(thickness):
     print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).rjust(thickness*6))
     
-    
+#I have seen the discussions for this exercise
+#n,m = map(int,input().split())  
+for i in range(1,n,2): 
+    print((i * ".|.").center(m, "-"))
+print("WELCOME".center(m,"-"))
+for i in range(n-2,-1,-2): 
+    print((i * ".|.").center(m, "-"))  
+
+
 #Capitalize!    
 def solve(s):
     l=s.split(" ")
