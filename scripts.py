@@ -588,6 +588,22 @@ for el in l:
 
 print(sum/n)
     
+    
+#Word Order
+n=int(input())
+diz={}
+distinct=n
+for pos in range(n):
+    word=input()
+    if word not in diz.keys():
+        diz[word]=(pos,1)
+    else:
+        distinct=distinct-1
+        diz[word]=diz[word][0],diz[word][1]+1
+print(distinct)
+for el in sorted(diz.values(),key=lambda a: a[0]):
+    print(el[1],end=" ")
+    
 #Collections.deque()
 from collections import deque
 d=deque()
