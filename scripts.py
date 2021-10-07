@@ -360,6 +360,31 @@ if __name__ == '__main__':
     s = input()
     minion_game(s)
 
+#Merge the Tools!
+def merge_the_tools(string, k):
+    # your code goes here
+    cont=0
+    l=[]
+    sub=[]
+    for el in range(len(string)):
+        if cont==k-1:
+            if not string[el] in sub:
+                sub.append(string[el])
+            l.append(sub)
+            cont=0
+            sub=[]
+        else:
+            if not string[el]  in sub:
+                sub.append(string[el])
+            cont+=1
+    for el in l:
+        print("".join(el))
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
+    
+    
+    
 
 #Introduction to Sets
 def average(array):
