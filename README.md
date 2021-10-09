@@ -2,7 +2,7 @@
 
 # dir homework1
 
-**list of elements that compose the directory:
+*list of elements that compose the directory:
 
 * PDF_printout.pdf
 the printout of all the submissions
