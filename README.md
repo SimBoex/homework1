@@ -2,7 +2,7 @@
 
 
 
-# list of elements that compose the directory:
+# list of elements that compose the repository:
 
 * **PDF_printout.pdf**
 the printout of all the submissions
