@@ -4,9 +4,9 @@
 
 # list of elements that compose the directory:
 
-* PDF_printout.pdf
+* **PDF_printout.pdf**
 the printout of all the submissions
-* scripts.py
+* **scripts.py**
  all the code written for the first problem's exercises 
-* scripts2.py
+* **scripts2.py**
 all the code written for the second problem's exercises
