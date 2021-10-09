@@ -7,6 +7,6 @@
 * **PDF_printout.pdf**
 the printout of all the submissions
 * **scripts.py**
- all the code written for the first problem's exercises 
-* **scripts2.py**
-all the code written for the second problem's exercises
+ all the code written for the two problems.
+ first all the exercise that belongs to the first and then the all second problem's exercises
+
