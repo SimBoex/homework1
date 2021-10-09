@@ -1,6 +1,6 @@
 # homework1
 
-# dir homework1
+
 
 # list of elements that compose the directory:
 
